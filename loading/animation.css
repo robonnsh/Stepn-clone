@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+}
+
+.section {
+  height: 100vh;
+  width: 100vw;
+}
+
+.vertical {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.letters {
+  width: 400px;
+  height: auto;
+  animation: drop .7s linear forwards;
+  visibility: hidden;
+  animation-delay: .8s;
+
+}
+
+/* drop animation*/
+@keyframes drop {
+  0% {
+    transform: translateY(-200px) scaleY(0.9) rotate(-40deg);
+    opacity: 0;
+  }
+
+  5% {
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateY(0px) scaleY(1);
+    opacity: .5;
+  }
+
+  65% {
+    transform: translateY(-17px) scaleY(.9);
+    opacity: .5;
+  }
+
+  75% {
+    transform: translateY(-22px) scaleY(.9);
+  }
+
+  100% {
+    transform: translateY(0px) scaleY(1);
+    visibility: visible;
+  }
+}
+
+
+/* drop animation for N */
+.n_letter {
+  width: 140px;
+  height: auto;
+  animation: drop_n 1.2s linear forwards;
+  visibility: hidden;
+  animation-delay: 1s;
+}
+
+@keyframes drop_n {
+  0% {
+    transform: translateY(-800px) scaleY(0.9) rotate(-100deg);
+    opacity: 0;
+  }
+
+  5% {
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateY(0px) scaleY(1);
+  }
+
+  65% {
+    transform: translateY(-17px) scaleY(.9);
+  }
+
+  75% {
+    transform: translateY(-22px) scaleY(.9);
+  }
+
+  100% {
+    transform: translateY(0px) scaleY(1);
+    visibility: visible;
+  }
+}
+
+.boot {
+  width: 160px;
+  height: auto;
+  animation: slide .4s linear forwards;
+  animation-delay: .6s;
+  visibility: hidden;
+}
+
+/* slide animation for shoe */
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateX(-1400px);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateX(30px);
+  }
+
+  80% {
+    transform: translateX(-10px);
+  }
+
+  100% {
+    transform: translateX(0);
+    visibility: visible;
+  }
+}
